@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBiNq-Lzj8zklkm9X01V4jHySlmKe-CEb8",
+            authDomain: "quiz-application-ac7cb.firebaseapp.com",
+            projectId: "quiz-application-ac7cb",
+            storageBucket: "quiz-application-ac7cb.appspot.com",
+            messagingSenderId: "1084578727343",
+            appId: "1:1084578727343:web:2627ace456a78dbcd71b5a",
+            measurementId: "G-CH5NY0LK0N"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+
+<body>
+    <nav id="navbar" class="navbar">
+        <div id="getUser" class="getUser">USER INFO </div>
+    </nav>
+    <div class="timmer" id="timmer">
+        <h1 id="min">0</h1>
+        <h1>:</h1>
+        <h1 id="sec">0</h1>
+        <h1>:</h1>
+        <h1 id="msec">0</h1>
+    </div>>
+    <div id="main-div" class="main_container">
+        <div class="login-div" id="login">
+            <h2>LOGIN</h2>
+            <input type="email" name="username" id="email" placeholder="Enter Email" required><br><br>
+            <input type="password" name="password" id="Password" placeholder="Enter Password" required><br><br>
+            <button id="login-btn" class="login_btn">Login</button><br><br>
+            <div class="or">OR</div>
+            <div class="right">
+                <button class="social-signin facebook" onclick="loginfb()">Log in with facebook</button><br>
+                <button class="social-signin google" onclick="logingoogle()">Log in with Google</button>
+            </div>
+            <a class="btn" href="./SignUp.html">Go To Sign Up</a>
+        </div>
+
+        <div id="quesAns-div" class="hide">
+            <div id="heading">
+                <h1>QUIZ JAVASCRIPT</h1>
+            </div>
+            <div id="question">Question</div>
+            <div id="answer-btn" class="btn-grid">
+                <button class="btn">Answer</button>
+                <button class="btn">Answer</button>
+                <button class="btn">Answer</button>
+                <button class="btn">Answer</button>
+            </div>
+
+            <div class="controls">
+                <button id="next-btn" class="next-btn btn hide">Next</button>
+                <button id="submit-btn" class="submit-btn btn hide">Submit</button>
+            </div>
+            <div id="score-div" class="hide">
+                <h2>CONGRATULATIONS🎉</h2>
+                <h4 id="result"> Score </h4>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

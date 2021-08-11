@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBiNq-Lzj8zklkm9X01V4jHySlmKe-CEb8",
+            authDomain: "quiz-application-ac7cb.firebaseapp.com",
+            projectId: "quiz-application-ac7cb",
+            storageBucket: "quiz-application-ac7cb.appspot.com",
+            messagingSenderId: "1084578727343",
+            appId: "1:1084578727343:web:2627ace456a78dbcd71b5a",
+            measurementId: "G-CH5NY0LK0N"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+
+<body>
+    <div class="main_container">
+        <div class="login-div">
+            <h2>SIGN UP</h2>
+            <input type="email" name="username" id="email_signup" placeholder="Enter Email" required><br><br>
+            <input type="password" name="password" id="Password_signup" placeholder="Enter Password" required><br><br>
+            <button id="signup_btn" class="btn"> Sign up</button>
+            <p>Go to Login Page <a href="./index.html">Click</a>
+            </p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
